@@ -20,10 +20,6 @@ public class Graph {
         return new ArrayList<>(adj.keySet());
     }
 
-    public List<Edge> getEdgesFrom(String node) {
-        return adj.getOrDefault(node, new ArrayList<>());
-    }
-
     public List<Edge> getAllEdges() {
         List<Edge> all = new ArrayList<>();
         Set<String> seen = new HashSet<>();
