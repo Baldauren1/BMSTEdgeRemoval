@@ -8,6 +8,10 @@ public class MSTResult {
 
     public MSTResult(List<Edge> edges) {
         this.edges = edges;
+        recalcTotalCost();
+    }
+
+    public void recalcTotalCost() {
         this.totalCost = edges.stream().mapToInt(Edge::getWeight).sum();
     }
 
